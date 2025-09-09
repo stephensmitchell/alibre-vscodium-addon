@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<RootNamespace></RootNamespace>
+		<TargetFramework>net481</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<OutputPath>.\bin\addon\</OutputPath>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+	<PropertyGroup Condition="">
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<PropertyGroup Condition="">
+		<PlatformTarget>x64</PlatformTarget>
+	</PropertyGroup>
+	<ItemGroup>
+		<None Remove=".editorconfig" />
+		<None Remove="scripts\alibre_setup.py" />
+		<None Remove="scripts\debugging.py" />
+		<None Remove="scripts\Template.py" />
+	</ItemGroup>
+	<ItemGroup>
+		<Content Include="logo.ico">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="alibre-vscodium-addon.adc">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="scripts\alibre_setup.py">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="scripts\Template.py">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="IronPython" Version="2.7.10" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="AlibreAddOn">
+			<HintPath>C:\Program Files\Alibre Design 28.1.1.28227\Program\AlibreAddOn.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="AlibreScriptAddOn">
+			<HintPath>C:\Program Files\Alibre Design 28.1.1.28227\Program\Addons\AlibreScript\AlibreScriptAddOn.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+		<Reference Include="AlibreX">
+			<HintPath>C:\Program Files\Alibre Design 28.1.1.28227\Program\AlibreX.dll</HintPath>
+			<Private>False</Private>
+		</Reference>
+	</ItemGroup>
+</Project>

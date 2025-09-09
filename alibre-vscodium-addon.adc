@@ -1,0 +1,10 @@
+﻿<AlibreDesignAddOn specificationVersion="2" friendlyName="Code Editor Addon">
+	<Author name="Stephen S. Mitchell" link="https://github.com/stephensmitchell/alibre-vscodium-addon"/>
+   <Copyright>Copyright (c) 2025 Stephen S. Mitchell</Copyright>
+   <DLL type="Managed" loadedWhen="Startup" location="alibre-vscodium-addon.dll"/>
+   <Icon location="Icons\logo.ico"/> 
+   <Menu text="alibre-vscodium-addon"/>
+   <Description>alibre-vscodium-addon</Description> 
+   <Workspace type="Always"/>
+   <Property name="Identifier" value="alibre-vscodium-addon"/>
+</AlibreDesignAddOn>
